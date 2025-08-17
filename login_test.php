@@ -3,8 +3,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 
-require_once "db.php";
-require_once "user.php";
+require_once "classes/db.php";
+require_once "classes/user.php";
 
 //connect to databse
 $database = new database();
