@@ -20,11 +20,13 @@
       $admin = $stmt->fetch(PDO::FETCH_ASSOC);
 
       //check user password and hashed password
+      
       if($admin && password_verify($password, $admin['password'])){
             return[
                 "id"    => $admin['id'],
                 "name"  => $admin['name'],
                 "email" => $admin['email'] ];
+              
       }
         
       else{
@@ -46,10 +48,10 @@
       $stmt->bindParam(':password',$password);
 
       if($stmt->execute()){
-        echo "admin data entered";
+        return true;
       }
       else{
-        "failed to enter admin";
+        return false;
       }
 
         
