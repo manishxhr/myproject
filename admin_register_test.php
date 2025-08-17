@@ -1,3 +1,4 @@
+
 <?php
 
 error_reporting(E_ALL);
@@ -28,6 +29,5 @@ if($newadmin){
 else{
     echo " <br>failed to enter admin";
 }
-
 
 ?>
